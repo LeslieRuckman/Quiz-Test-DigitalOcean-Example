@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h4 This is the home page
+  p Using templates!
+  a(id='socket' href) Send a Socket Message
+
+  form(id='chat')
+    input(type='text' id='chat-message' placeholder='enter your message')
+    input(type='submit' value='send message')
+  br
+  form(method='POST', action='/newuser' id='user')
+    input(type='text' id='username' name='username' placeholder='Enter name here')
+    input(type='submit' name='submit' value='Save User')
+
+  br
+  form(id='gif')
+    input(type='text' placeholder='enter gif' id='gif-value')
+    input(type='submit' value='Get Gif')
+  br
+  ul(id='chat-messages')
